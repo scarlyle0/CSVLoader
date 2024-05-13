@@ -1,3 +1,5 @@
+# Loads csv file into pandas dataframe then into a SQLite file
+
 import pandas as pd
 import sqlite3
 import os

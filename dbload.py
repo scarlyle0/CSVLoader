@@ -1,7 +1,9 @@
+# Loads db file into a pandas dataframe then displays
+
 import pandas as pd
 import sqlite3
 
-# Function to load data from SQLite database into a pandas DataFrame
+
 def load_sqlite_data(database_name, table_name):
     conn = sqlite3.connect(database_name)
     query = "SELECT * FROM {}".format(table_name)
@@ -9,14 +11,10 @@ def load_sqlite_data(database_name, table_name):
     conn.close()
     return df
 
-# Database file name
 database_name = "my_database.db"
 
-# Table name
 table_name = "my_table"
 
-# Load data from SQLite database into a pandas DataFrame
 df_from_db = load_sqlite_data(database_name, table_name)
 
-# Print the DataFrame
 print(df_from_db)
